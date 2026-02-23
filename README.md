@@ -1,14 +1,18 @@
-# student-manager-cli-c
-Basic student management CLI written in C
+# Student Manager CLI (C)
+A simple student management CLI written in C using structs, arrays, and pointers.
 
 ## Features
 - Add student
 - Display student list
-- Delete student by ID
+- Delete student by ID (MSSV)
 - Sort students by GPA
 
 ## Technologies
 - C programming language
+- Struct
+- Arrays
+- Pointers
+- Standard libraries (`stdio.h`, `stdlib.h`, `string.h`)
 
 ## How to Run
 
