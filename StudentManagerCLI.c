@@ -2,7 +2,21 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include "StudentHeader.h" // include file student.h
+
+typedef struct {
+    char name[100];
+    char studentclass[100];
+    char mssv[100];
+    double gpa;
+} Student;
+
+void trim(char *buffer);
+void addStudent(Student *sinhvien);
+void printStudent(const Student *sinhvien);
+void findStudent(const Student a[], int n, const char id[]);
+void deleteStudent(Student student[], int *n, const char mssv[]);
+int gpaCompaDecrease(const void *a, const void *b);
+int gpaCompaIncrease(const void *a, const void *b);
 
 int main(void){
     //tránh user bấm các option khác trước 1.
