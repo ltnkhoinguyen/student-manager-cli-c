@@ -20,8 +20,8 @@ A simple command-line application for managing student records, written in C usi
 This project was built to practice:
 - Working with structs and arrays
 - Using pointers effectively
-- Handling input with `fgets`
-- Sorting data with `qsort`
+- Handling input
+- Sorting data
 - Writing modular and readable C code
 
 ## Future Improvements
