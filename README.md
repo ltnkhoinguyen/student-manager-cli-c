@@ -1,7 +1,12 @@
 # Student Manager CLI (C)
 
 A simple command-line application for managing student records, written in C using structs, arrays, and pointers.
+## How to Run
 
+### Compile
+```bash
+gcc StudentManagerCLI.c -o app
+```
 ## Features
 - Add student
 - Display student list
@@ -29,9 +34,3 @@ This project was built to practice:
 - Use dynamic memory allocation (`malloc`, `free`)
 - Improve CLI interface
 - Improve code structure and readability
-
-## How to Run
-
-### Compile
-```bash
-gcc StudentManagerCLI.c -o app
