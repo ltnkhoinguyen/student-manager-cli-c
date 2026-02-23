@@ -18,7 +18,7 @@ int main(void){
         printf("2. Nhap thong tin sinh vien\n");
         printf("3. Hien thi danh sach sinh vien\n");
         printf("4. Xoa sinh vien theo MSSV\n");
-        printf("5. Liet ke sinh vien theo GPA giam dan\n");
+        printf("5. Liet ke sinh vien theo GPA tang/giam dan\n");
         printf("6. Tim kiem sinh vien theo MSSV\n");
         printf("7. Exit\n");
         printf("------------------\n");
@@ -75,14 +75,13 @@ int main(void){
                 if(luachon == 2) { //Them thong tin svien
                     for(int i = studentCount; i < capacity; i++) {
                         addStudent(&student[i]);
-                        studentCount = i + 1;
                         ++studentCount;
                     }
                     printf("\n");
                 }
                 else if(luachon == 3) { //Hien thi thong tin sinh vien
                     if(studentCount != 0) {
-                        for(int i = 0; i < studentCount - 1; i++) {
+                        for(int i = 0; i < studentCount; i++) {
                             printStudent(&student[i]);
                         }
                     }
@@ -104,14 +103,14 @@ int main(void){
                     scanf("%d", &opt1);
                     while(getchar() != '\n');
                     if(studentCount != 0 && opt1 == 1) {
-                        qsort(student, studentCount - 1, sizeof(Student), gpaCompaDecrease);
-                        for(int i = 0; i < studentCount - 1; i++) {
+                        qsort(student, studentCount, sizeof(Student), gpaCompaDecrease);
+                        for(int i = 0; i < studentCount; i++) {
                             printStudent(&student[i]);
                         }
                     }
                     else if(studentCount != 0 && opt1 == 2){
-                        qsort(student, studentCount - 1, sizeof(Student), gpaCompaIncrease);
-                        for(int i = 0; i < studentCount - 1; i++) {
+                        qsort(student, studentCount, sizeof(Student), gpaCompaIncrease);
+                        for(int i = 0; i < studentCount; i++) {
                             printStudent(&student[i]);
                         }
                     }
