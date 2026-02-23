@@ -82,7 +82,7 @@ int main(void){
                 }
                 else if(luachon == 3) { //Hien thi thong tin sinh vien
                     if(studentCount != 0) {
-                        for(int i = 0; i < studentCount; i++) {
+                        for(int i = 0; i < studentCount - 1; i++) {
                             printStudent(&student[i]);
                         }
                     }
