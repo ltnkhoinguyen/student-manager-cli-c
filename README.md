@@ -5,8 +5,8 @@ A simple student management CLI written in C using structs, arrays, and pointers
 - Add student
 - Display student list
 - Delete student by ID (MSSV)
-- Find student by ID (MSSV)
-- Sort students by GPA
+- Find student by ID (MSSV).
+- Sort students by GPA using qsort (stdlib.h).
 
 ## Technologies
 - C programming language
