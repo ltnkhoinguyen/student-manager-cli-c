@@ -15,6 +15,7 @@ A simple student management CLI written in C using structs, arrays, and pointers
 - Pointers
 
 ## How to Run
+Download the project and compile.
 
 ### Compile
 ```bash
