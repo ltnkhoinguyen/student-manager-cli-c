@@ -98,7 +98,7 @@ int main(void){
                     //size của struct
                     if(studentCount != 0) {
                         qsort(student, studentCount, sizeof(Student), gpaCompa);
-                        for(int i = 0; i < studentCount; i++) {
+                        for(int i = 0; i < studentCount - 1; i++) {
                             printStudent(&student[i]);
                         }
                     }
