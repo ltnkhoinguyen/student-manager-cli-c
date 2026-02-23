@@ -1,5 +1,5 @@
-#ifndef STUDENT_H // chống include student.h nhiều lần
-#define STUDENT_H // chống include student.h nhiều lần
+#ifndef STUDENT_H // chống include nhiều lần
+#define STUDENT_H // chống include nhiều lần
 
 typedef struct {
     char name[100];
@@ -13,6 +13,7 @@ void addStudent(Student *sinhvien);
 void printStudent(const Student *sinhvien);
 void findStudent(const Student a[], int n, const char id[]);
 void deleteStudent(Student student[], int *n, const char mssv[]);
-int gpaCompa(const void *a, const void *b);
+int gpaCompaDecrease(const void *a, const void *b);
+int gpaCompaIncrease(const void *a, const void *b);
 
-#endif // chống include student.h nhiều lần
+#endif // chống include nhiều lần

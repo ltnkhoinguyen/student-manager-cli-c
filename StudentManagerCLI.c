@@ -95,9 +95,22 @@ int main(void){
                     deleteStudent(student, &studentCount, mssv1);
                 }
                 else if(luachon == 5) { //Sap xep sinh vien theo gpa
-                    //size của struct
-                    if(studentCount != 0) {
-                        qsort(student, studentCount, sizeof(Student), gpaCompa);
+                    int opt1;
+                    printf("---------------------------------\n");
+                    printf("1. Liet ke theo gpa giam dan\n");
+                    printf("2. Liet ke theo gpa tang dan\n");
+                    printf("---------------------------------\n");
+                    printf("Nhap lua chon: ");
+                    scanf("%d", &opt1);
+                    while(getchar() != '\n');
+                    if(studentCount != 0 && opt1 == 1) {
+                        qsort(student, studentCount - 1, sizeof(Student), gpaCompaDecrease);
+                        for(int i = 0; i < studentCount - 1; i++) {
+                            printStudent(&student[i]);
+                        }
+                    }
+                    else if(studentCount != 0 && opt1 == 2){
+                        qsort(student, studentCount - 1, sizeof(Student), gpaCompaIncrease);
                         for(int i = 0; i < studentCount - 1; i++) {
                             printStudent(&student[i]);
                         }
@@ -159,11 +172,19 @@ void printStudent(const Student *sinhvien){
 }
 
 //Sắp xếp sinh viên theo gpa dùng hàm qsort
-int gpaCompa(const void *a, const void *b) {
+int gpaCompaDecrease(const void *a, const void *b) {
     Student *x = (Student*)a; // phải cùng kiểu struct x = struct a
     Student *y = (Student*)b;
     if (x->gpa > y->gpa) return -1;// tại struct student x.gpa
     else if(x->gpa < y->gpa) return 1;
+    return 0;
+}
+
+int gpaCompaIncrease(const void *a, const void *b) {
+    Student *x = (Student*)a; // phải cùng kiểu struct x = struct a
+    Student *y = (Student*)b;
+    if (x->gpa < y->gpa) return -1;// tại struct student x.gpa
+    else if(x->gpa > y->gpa) return 1;
     return 0;
 }
 

@@ -1,21 +1,36 @@
 # Student Manager CLI (C)
-A simple student management CLI written in C using structs, arrays, and pointers.
+
+A simple command-line application for managing student records, written in C using structs, arrays, and pointers.
 
 ## Features
 - Add student
 - Display student list
 - Delete student by ID (MSSV)
-- Find student by ID (MSSV).
-- Sort students by GPA using qsort (stdlib.h).
+- Find student by ID (MSSV)
+- Sort students by GPA using `qsort`
 
 ## Technologies
 - C programming language
-- Struct
+- Structs
 - Arrays
 - Pointers
+- Standard libraries (`stdio.h`, `stdlib.h`, `string.h`)
+
+## Learning Goals
+This project was built to practice:
+- Working with structs and arrays
+- Using pointers effectively
+- Handling input with `fgets`
+- Sorting data with `qsort`
+- Writing modular and readable C code
+
+## Future Improvements
+- Save and load data from file
+- Use dynamic memory allocation (`malloc`, `free`)
+- Improve CLI interface
+- Improve code structure and readability
 
 ## How to Run
-Download the project and compile.
 
 ### Compile
 ```bash
