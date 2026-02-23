@@ -2,7 +2,7 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-#include "student.h" // include file student.h
+#include "StudentHeader.h" // include file student.h
 
 int main(void){
     //tránh user bấm các option khác trước 1.
@@ -133,8 +133,8 @@ void addStudent(Student *sinhvien){
     fgets(sinhvien->name, sizeof(sinhvien->name), stdin);
     trim(sinhvien->name); 
     printf("Nhap lop: ");
-    fgets(sinhvien->class, sizeof(sinhvien->class), stdin);
-    trim(sinhvien->class);
+    fgets(sinhvien->studentclass, sizeof(sinhvien->studentclass), stdin);
+    trim(sinhvien->studentclass);
     printf("Nhap MSSV: ");
     fgets(sinhvien->mssv, sizeof(sinhvien->mssv), stdin);
     trim(sinhvien->mssv);
@@ -152,7 +152,7 @@ void printStudent(const Student *sinhvien){
     //là   *sinhvien.name (địa chỉ ký tự đầu trong mảng)
     // tại name của sinhvien đó.
     printf("Ho va ten: %s\n", sinhvien->name); //đã tự là địa chỉ rồi (do array decay)
-    printf("Lop: %s\n", sinhvien->class);
+    printf("Lop: %s\n", sinhvien->studentclass);
     printf("MSSV: %s\n", sinhvien->mssv);
     printf("GPA: %.2lf\n", sinhvien->gpa);
     printf("\n");

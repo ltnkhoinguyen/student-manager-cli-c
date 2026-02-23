@@ -3,7 +3,7 @@
 
 typedef struct {
     char name[100];
-    char class[100];
+    char studentclass[100];
     char mssv[100];
     double gpa;
 } Student;
