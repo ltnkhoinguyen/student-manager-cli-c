@@ -12,7 +12,6 @@ A simple student management CLI written in C using structs, arrays, and pointers
 - Struct
 - Arrays
 - Pointers
-- Standard libraries (`stdio.h`, `stdlib.h`, `string.h`)
 
 ## How to Run
 
